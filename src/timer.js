@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SaveTimes from './saveTimes';
 let interval;
 let pose = 'Stop'
 let poseButton = false
@@ -15,9 +16,7 @@ class Timer extends React.Component {
         poseButton = false
         pose = 'Stop'
     }
-    clearTime = () => {
-       
-    }
+
     StartStop = () => {
         poseButton = !poseButton
         if (poseButton) {
@@ -32,6 +31,16 @@ class Timer extends React.Component {
             pose = 'Stop'
         }
     }
+
+    SendTimes = ()=>{
+        let h = this.state.hour.toString().padStart(2, '0')
+        let m = this.state.min.toString().padStart(2, '0')
+        let s = this.state.sec.toString().padStart(2, '0')
+        let mi = this.state.milli.toString().padStart(2, '0')
+        let newTime =`${h}:${m}:${s}:${mi}`;
+        this.props.setTimes([...this.props.times , newTime])
+    }
+    
     componentDidUpdate() {
         if (this.state.milli === 100) {
             this.setState({ sec: this.state.sec + 1, milli: 0 })
@@ -55,8 +64,10 @@ class Timer extends React.Component {
                 <div className='buttonDiv'>
                     <button onClick={this.StartStop} >{pose == 'Stop'?'Start':'Stop'}</button>
                     <button onClick={this.resetTime} >Reverse</button>
-                    <button onClick={this.props.islightFun}>{this.props.themColor ? 'black' : 'white'}</button>
+                    <button onClick={this.props.islightFun}>{this.props.themColor ? 'white' : 'black'}</button>
+                    <button onClick={this.SendTimes}>+</button>
                 </div>
+                <SaveTimes>{this.props.times}</SaveTimes>
             </>
         )
     }

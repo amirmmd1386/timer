@@ -74,3 +74,24 @@ button:hover {
 input {
   align-self: self-start;
 }
+.timeSave{
+  box-shadow: 2px 2px 8px 2px blueviolet;
+  margin-top: 20px;
+  font-size: 30px;
+  height: 100px;
+  width: 250px;
+  overflow-y: scroll;
+  
+}
+.timeSave::-webkit-scrollbar{
+  width: 15px;
+}
+.timeSave::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+.timeSave::-webkit-scrollbar-thumb{
+  background-color: blueviolet;
+}
+hr{
+  border: 1px solid blueviolet;
+}

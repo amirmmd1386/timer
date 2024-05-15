@@ -21,14 +21,19 @@ import './index.css';
 let App = () => {
   const [them, setThem] = useState(true);
   const [titleMain, setTitle] = useState('This is my first React App (Timer)');
-  const islightFun = ()=>{
+  const [times, setTimes] = useState([]);
+  const islightFun = () => {
     setThem(!them);
   }
   return (
-    <div className='main' style={{background: them ? 'black' : 'white'}}>
-        <Msg title={titleMain} />
-        <Timer themColor={them} islightFun={islightFun}/>
+    <div className='main' style={{ background: them ? 'black' : 'white' }}>
+      <Msg title={titleMain} />
+      <Timer
+        times={times}
+        setTimes ={setTimes}
+        themColor={them}
+        islightFun={islightFun} />
     </div>
-        )
+  )
 }
 export default App;
