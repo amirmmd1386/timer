@@ -1,9 +1,9 @@
-import React from 'react';
+import React , { useState } from 'react';
 import ReactDOM from 'react-dom';
 class Msg extends React.Component{
     render(){
         return(
-            <div><h1>THIS IS MY REACT PROJECT <b>CLOCK</b></h1></div>
+            <div><h1>{this.props.title}</h1></div>
         )
     }
 }
