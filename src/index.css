@@ -16,6 +16,8 @@
   justify-content: center;
   color: blueviolet;
   text-align: center;
+  transition: all ease 1s;
+
 }
 
 h1 {
@@ -74,7 +76,8 @@ button:hover {
 input {
   align-self: self-start;
 }
-.timeSave{
+
+.timeSave {
   box-shadow: 2px 2px 8px 2px blueviolet;
   margin-top: 20px;
   font-size: 30px;
@@ -83,15 +86,28 @@ input {
   overflow-y: scroll;
   
 }
-.timeSave::-webkit-scrollbar{
+
+.timeSave::-webkit-scrollbar {
   width: 15px;
 }
-.timeSave::-webkit-scrollbar-track{
+
+.timeSave::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.timeSave::-webkit-scrollbar-thumb{
+
+.timeSave::-webkit-scrollbar-thumb {
   background-color: blueviolet;
 }
-hr{
+
+hr {
   border: 1px solid blueviolet;
+}
+.timeNote{
+  transition: all ease 1s;
+  
+}
+.timeNote:hover {
+  color: black;
+  background-color: blueviolet;
+  box-shadow: 2px 2px 8px 2px blueviolet;
 }
