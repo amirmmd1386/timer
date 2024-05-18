@@ -16,6 +16,7 @@ class Timer extends React.Component {
         clearInterval(interval);
         poseButton = false
         pose = 'Stop'
+        document.querySelector('#getTime').value = ""
     }
     static contextType = Mycontext
     StartStop = () => {
@@ -98,7 +99,7 @@ class Timer extends React.Component {
                     <button onClick={this.props.islightFun}>{this.props.themColor ? 'white' : 'black'}</button>
                     <button onClick={this.SendTimes}>+</button>
                 </div>
-                <input type='number' onKeyDown={this.madeUsuallTime} placeholder='Enter the MilliSecond' id='getTime' />
+                <input type='number' onKeyUp={this.madeUsuallTime} placeholder='Enter the MilliSecond' id='getTime' />
             </>
         )
     }
