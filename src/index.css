@@ -20,6 +20,23 @@
 
 }
 
+input {
+  margin: 0 auto;
+  margin-top: 15px;
+  border: 2px solid blueviolet;
+  background-color: black;
+  color: blueviolet;
+  font-size: 20px;
+  width: 250px;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 3px 3px 10px blueviolet;
+}
+
 h1 {
   font-size: 25px;
 }
@@ -84,7 +101,7 @@ input {
   height: 100px;
   width: 250px;
   overflow-y: scroll;
-  
+
 }
 
 .timeSave::-webkit-scrollbar {
@@ -102,10 +119,12 @@ input {
 hr {
   border: 1px solid blueviolet;
 }
-.timeNote{
+
+.timeNote {
   transition: all ease 1s;
-  
+
 }
+
 .timeNote:hover {
   color: black;
   background-color: blueviolet;
